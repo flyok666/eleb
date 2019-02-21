@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::domain('admin.eleb.test')->group(function () {
+    Route::namespace('Admin')->group(function () {
+        Route::resource('shop_categories','ShopCategoryController');
+
+        //文件上传
+        Route::post('/upload','ShopCategoryController@upload')->name('upload');
+    });
+
+});
+

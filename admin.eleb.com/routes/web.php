@@ -25,3 +25,14 @@ Route::domain('admin.eleb.test')->group(function () {
 
 });
 
+//接口
+//商家列表
+Route::get('/api/business_list','Api\ApiController@busniessList');
+//注册接口
+Route::post('/api/register',function(){
+    return 'ok';
+});
+
+//发送短信接口
+Route::get('/api/sms','Api\ApiController@sms');
+

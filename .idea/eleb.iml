@@ -46,6 +46,7 @@
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/qcloudsms/qcloudsms_php" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/sebastian/comparator" />

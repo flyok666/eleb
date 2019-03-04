@@ -36,3 +36,17 @@ Route::post('/api/register',function(){
 //发送短信接口
 Route::get('/api/sms','Api\ApiController@sms');
 
+//统计demo
+Route::get('/tongji',function(){
+    //最近7天的订单量
+    $datas = [
+        '2019-03-04'=>55,
+        '2019-03-03'=>144,
+        '2019-03-02'=>255,
+        '2019-03-01'=>535,
+        '2019-02-28'=>855,
+        '2019-02-27'=>205,
+        '2019-02-26'=>5,
+    ];
+    return view('www.tongji',compact('datas'));
+});

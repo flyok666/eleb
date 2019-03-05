@@ -38,7 +38,8 @@ Route::get('/api/sms','Api\ApiController@sms');
 
 //统计demo
 Route::get('/tongji',function(){
-    //最近7天的订单量
+
+
     $datas = [
         '2019-03-04'=>55,
         '2019-03-03'=>144,
@@ -49,4 +50,8 @@ Route::get('/tongji',function(){
         '2019-02-26'=>5,
     ];
     return view('www.tongji',compact('datas'));
+});
+
+Route::get('orderPay',function(){
+    return 'pay';
 });

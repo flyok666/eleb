@@ -55,3 +55,22 @@ Route::get('/tongji',function(){
 Route::get('orderPay',function(){
     return 'pay';
 });
+
+Route::get('/mail',function(){
+	$title = '全新体验，手机也能玩转网易邮箱2.0';
+	$content = '<p>	
+重要的邮件如何才能让<span style="color: red">对方立刻查看</span>！
+随身邮，可以让您享受随时短信提醒和发送邮件可以短信通知收件人的服务，重要的邮件一个都不能少！</p>';
+	try{
+        \Illuminate\Support\Facades\Mail::send('email.default',compact('title','content'),
+            function($message){
+                $to = 'xunzhaomeijia2@163.com';
+                $message->from(env('MAIL_USERNAME'))->to($to)->subject('阿里云数据库10月刊:Redis2发布');
+            });
+    }catch (Exception $e){
+	    return '邮件发送失败';
+    }
+
+
+    
+});

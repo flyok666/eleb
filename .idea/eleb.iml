@@ -59,6 +59,7 @@
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/sebastian/recursion-context" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/sebastian/resource-operations" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/spatie/laravel-permission" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/admin.eleb.com/vendor/symfony/css-selector" />

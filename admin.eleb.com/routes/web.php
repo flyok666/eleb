@@ -77,8 +77,8 @@ Route::get('/mail',function(){
 
 //添加用户路由
 Route::group(['middleware' => ['permission:user.add']], function () {
-    Route::get('user/add', 'XXXController@add')->name();
-    Route::post('user/save', 'XXXController@add')->name();
+    Route::get('user/add', 'XXXController@add')->name('a1');
+    Route::post('user/save', 'XXXController@add')->name('a2');
 });
 //查看用户路由
 Route::group(['middleware' => ['permission:user.index']], function () {

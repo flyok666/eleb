@@ -9,9 +9,20 @@ use Illuminate\Support\Facades\Storage;
 
 class ShopCategoryController extends Controller
 {
+    public function __construct()
+    {
+        //$this->middleware(['role:商店管理员']);
+        $this->middleware('permission:添加分类',[
+            'only'=>['create','store']
+        ]);
+        $this->middleware('permission:分类列表',[
+            'only'=>['index']
+        ]);
+    }
     //商家分类列表
     public function index()
     {
+
         $shop_categories = ShopCategory::paginate(10);
 
         return view('admin.shop_category.index',compact('shop_categories'));

@@ -74,3 +74,18 @@ Route::get('/mail',function(){
 
     
 });
+
+//添加用户路由
+Route::group(['middleware' => ['permission:user.add']], function () {
+    Route::get('user/add', 'XXXController@add')->name();
+    Route::post('user/save', 'XXXController@add')->name();
+});
+//查看用户路由
+Route::group(['middleware' => ['permission:user.index']], function () {
+    Route::get('user/index','XXXController@add');
+});
+
+//根据角色
+//Route::group(['middleware' => ['role:用户管理员']], function () {
+    Route::resource('admins', 'AdminController');
+//});
